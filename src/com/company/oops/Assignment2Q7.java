@@ -6,7 +6,7 @@ abstract class DesertItem {
 }
 class Candy extends DesertItem {
     public int addCandies(int candies){
-
+        return 0;
     }
 
     @Override
@@ -15,7 +15,9 @@ class Candy extends DesertItem {
     }
 }
 class Cookie extends DesertItem {
-    public int addCookies(int candies){}
+    public int addCookies(int candies){
+        return 0;
+    }
 
     @Override
     public int getCost() {
@@ -23,7 +25,9 @@ class Cookie extends DesertItem {
     }
 }
 class IceCream extends DesertItem {
-    public int addIceCreams(int candies){}
+    public int addIceCreams(int candies){
+        return 0;
+    }
 
     @Override
     public int getCost() {
