@@ -4,20 +4,20 @@ package com.company.oops;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Manager extends Q2Polymorphism{
+class Manager extends Assignment2Q3 {
     public int getSalary(int salary) {
         int incentive = 5000;
         return salary+incentive;
     }
 
 }
-class Labour extends Q2Polymorphism{
+class Labour extends Assignment2Q3 {
     public int getSalary(int salary) {
         int overtime = 500;
         return salary + overtime;
     }
 }
-public class Q2Polymorphism {
+public class Assignment2Q3 {
     static int salary =10000;
 
     public int getSalary() {
@@ -35,7 +35,7 @@ public class Q2Polymorphism {
         ArrayList<Integer> employees = new ArrayList<>();
         Manager manager = new Manager();
         Labour labour =new Labour();
-        Q2Polymorphism object = new Q2Polymorphism();
+        Assignment2Q3 object = new Assignment2Q3();
         for(int i =0;i<5;i++){
             System.out.println("Employee Category");
             String employeeCategory=sc.next();
