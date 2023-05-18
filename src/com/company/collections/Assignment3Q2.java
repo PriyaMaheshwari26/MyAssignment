@@ -1,16 +1,21 @@
 package com.company.collections;
 
-import java.util.HashSet;
+import java.util.*;
 
 public class Assignment3Q2 {
-    class  Product{
+    public static void main(String[] args)
+    {
 
-    }
-    public static void main(String[] args) {
-        /*Write an application to store 10 unique product objects. In case there is an attempt to add a
-        duplicate product, it should be silently rejected. Hint: Use HasSet or TreeSet
-        Extra(optional): Use ArrayList in the above solution. (This is optional)*/
-        HashSet<Product> hashSet=new HashSet<>();
+        HashSet<product> set = new HashSet<>();
 
+
+        set.add(new product("cream", 499));
+        set.add(new product("Maggie", 12));
+        set.add(new product("Nachos", 50));
+        set.add(new product("Shampoo", 451));
+        set.add(new product("Shampoo", 451));
+        for (product std : set) {
+            System.out.println(std.name + " " + std.price);
+        }
     }
 }
