@@ -45,41 +45,53 @@ class Employee{
 }
 public class Assignment3Q3 {
     public static void main(String[] args) {
-        Employee obj=new Employee(101,"abc","Testing",35000);
-        Employee obj1=new Employee(102,"abc","HR",35000);
-        Employee obj2=new Employee(103,"abc","Developer",35000);
-        Employee obj3=new Employee(104,"abc","Sells",35000);
-        Employee obj4=new Employee(105,"abc","Testing",35000);
-        Employee obj5=new Employee(106,"abc","Developer",35000);
-        Employee obj6=new Employee(107,"abc","Testing",35000);
-        Employee obj7=new Employee(108,"abc","HR",35000);
-        Employee obj8=new Employee(109,"abc","Sells",35000);
-        Employee obj9=new Employee(110,"abc","Testing",35000);
+        Employee obj = new Employee(101, "abc", "Testing", 35000);
+        Employee obj1 = new Employee(102, "abc", "HR", 35000);
+        Employee obj2 = new Employee(103, "abc", "Developer", 35000);
+        Employee obj3 = new Employee(104, "abc", "Sells", 35000);
+        Employee obj4 = new Employee(105, "abc", "Testing", 35000);
+        Employee obj5 = new Employee(106, "abc", "Developer", 35000);
+        Employee obj6 = new Employee(107, "abc", "Testing", 35000);
+        Employee obj7 = new Employee(108, "abc", "HR", 35000);
+        Employee obj8 = new Employee(109, "abc", "Sells", 35000);
+        Employee obj9 = new Employee(110, "abc", "Testing", 35000);
 
         System.out.println("Enter your choice: ");
         System.out.println("1.ID\n2.Name\n3.Department\n4.Salary");
-        Scanner sc=new Scanner(System.in);
-        int ch= sc.nextInt();
-        switch (ch){
+        Scanner sc = new Scanner(System.in);
+        int ch = sc.nextInt();
+        switch (ch) {
 
-            case 1: class MyNameComp implements Comparator<Employee> {
+            case 1:
+                class IdComp implements Comparator<Employee> {
 
-                @Override
-                public int compare(Employee e1, Employee e2) {
-                    return new Integer(e1.getId()).compareTo(new Integer(e2.getId()));
+                    @Override
+                    public int compare(Employee e1, Employee e2) {
+                        return new Integer(e1.getId()).compareTo(new Integer(e2.getId()));
+                    }
+
                 }
-
-            }
                 break;
-            case 2:class MyNameComp1 implements Comparator<Employee>{
+            case 2:
+                class NameComp implements Comparator<Employee> {
 
-                @Override
-                public int compare(Employee e1, Employee e2) {
-                    return e1.getName().compareTo(e2.getName());
+                    @Override
+                    public int compare(Employee e1, Employee e2) {
+                        return e1.getName().compareTo(e2.getName());
+                    }
+
                 }
-
-            }
                 break;
+
+            case 3:
+                class DeptComp implements Comparator<Employee> {
+
+                    @Override
+                    public int compare(Employee e1, Employee e2) {
+                        return e1.getDepartment().compareTo(e2.getName());
+                    }
+
+                }
         }
     }
 
