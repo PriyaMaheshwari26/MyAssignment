@@ -67,7 +67,10 @@ public class Assignment3Q3 {
 
                     @Override
                     public int compare(Employee e1, Employee e2) {
-                        return new Integer(e1.getId()).compareTo(new Integer(e2.getId()));
+//                        return new Integer(e1.getId()).compareTo(new Integer(e2.getId()));
+                        if(e1.getId()>(e2.getId())) return 1;
+                        if(e1.getId()<(e2.getId())) return -1;
+                        else return 0;
                     }
 
                 }
@@ -89,6 +92,18 @@ public class Assignment3Q3 {
                     @Override
                     public int compare(Employee e1, Employee e2) {
                         return e1.getDepartment().compareTo(e2.getName());
+                    }
+
+                }
+            case 4:
+                class SalaryComp implements Comparator<Employee> {
+
+                    @Override
+                    public int compare(Employee e1, Employee e2) {
+                        if(e1.getSalary()>(e2.getSalary())) return 1;
+                        if(e1.getSalary()<(e2.getSalary())) return -1;
+                        else return 0;
+
                     }
 
                 }
